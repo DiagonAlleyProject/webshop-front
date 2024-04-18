@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Yellowtail&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --black:#000000;
+    --red: #ff0000;
+    --white: #fafafb;
+    --blacktraslu: hsla(0, 0%, 0%, 0.208);
+ 
+ }
+
+body{
+    /* width: 100%; */
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom,var(--black),var(--red));
+    height: 100vh;
+    color: var(--white);
+}
+
+/* h1 */
+.great-vibes-regular{
+    /* tipografia de googleFonts */
+    font-family: "Great Vibes", cursive;
+     font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* botón iniciar sesión */
+.cerrar-sesion{
+    width: 50%;
+    height: 30px;
+    border: none;
+    background-color: rgba(224, 22, 22, 0.852);
+    color: var(--white);
+    padding-left: 10px;
+    margin-top: 30px;
+} 
+
+.cerrar-sesion{
+    transform: scale(1.1);
+    cursor: pointer;
+}
