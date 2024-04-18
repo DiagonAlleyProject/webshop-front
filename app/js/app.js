@@ -10,7 +10,5 @@ btnCerrarSesion.addEventListener('click', (ev) =>{
     console.log(EliminarToken);
 
     // Ir pagina de logueo
-    window.location.href = '../login/login.html';
-    
-    
+    window.location.href = '../login/login.html';    
 })

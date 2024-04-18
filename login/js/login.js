@@ -30,16 +30,16 @@ loginForm.addEventListener('submit', (ev) => {
         .then(response => {
             console.log(response.headers.get('Authorization'));
 
-        if(response.status === 200){
-            const token = response.headers.get('Authorization');
-            // Almacenar el token en localStorage
-            localStorage.setItem('token', token);
+            if(response.status === 200){
+                const token = response.headers.get('Authorization');
+                // Almacenar el token en localStorage
+                localStorage.setItem('token', token);
 
-           window.location.href = '../app/app.html';
+                window.location.href = '../app/app.html';
 
-        }else {
-            alert('Contraseña incorrecta..')
-        }
+            }else {
+                alert('Contraseña incorrecta..');
+            }
         })
         .catch(error => console.error('Error:', error));
 });
