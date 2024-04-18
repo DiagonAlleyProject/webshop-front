@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Yellowtail&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --black:#000000;
+    --red: #ff0000;
+    --white: #fafafb;
+    --blacktraslu: hsla(0, 0%, 0%, 0.208);
+
+}
+
+body{
+    /* width: 100%; */
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom,var(--black),var(--red));
+     height: 100%;
+     color: var(--white);
+   
+}
+
+/* contenedor div, contiene todo el formulario */
+.container {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* formulario */
+#login-form {
+    /* border: 2px solid blue;  */
+    /*Opcional: altura total de la ventana */
+    height: 95%;  
+}
+/* h1 */
+.great-vibes-regular{
+    /* tipografia de googleFonts */
+    font-family: "Great Vibes", cursive;
+     font-weight: 400;
+    font-style: normal;
+
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* inia sesión */
+h2{
+    margin-bottom: 30px;
+}
+/* div donde estan los label e input y botón */
+ #form-grup{
+    height: 70%;
+    margin: 30px;
+    margin-top: 30%;
+    padding: 30px;
+    border: 2px solid var(--blacktraslu);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blacktraslu);
+    
+}  
+
+.inputs input {
+
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: hsla(0, 0%, 0%, 0.458);
+    padding-left: 10px;
+    color: var(--white);
+      
+}
+
+/* botón iniciar sesión */
+ #inciarSesion{
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: rgba(224, 22, 22, 0.852);
+    color: var(--white);
+    padding-left: 10px;
+} 
+
+#inciarSesion:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* enlace de olvido su contraseña */
+.olvide-contra{
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+
+/* enlace de registro */
+.resgistrate{
+    background-color: var(--blacktraslu);
+
+    border: 2px solid var(--blacktraslu);
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+}
+
+/* enlaces */
+a{
+    font-weight: bold;
+    color: var(--white);
+}
+
