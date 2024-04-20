@@ -1,6 +1,5 @@
 
 const loginForm = document.getElementById('login-form');
-const btnIniciarSesion = document.getElementById('inciarSesion');
 
 loginForm.addEventListener('submit', (ev) => {
     // Prevenir recarga de la pagina.
@@ -29,72 +28,14 @@ loginForm.addEventListener('submit', (ev) => {
     fetch(URL, post)
         .then(response => {
             console.log(response.headers.get('Authorization'));
-
             if(response.status === 200){
                 const token = response.headers.get('Authorization');
                 // Almacenar el token en localStorage
                 localStorage.setItem('token', token);
-
-                window.location.href = '../app/app.html';
-
+                window.location.href = 'app.html';
             }else {
                 alert('Contraseña incorrecta..');
             }
         })
         .catch(error => console.error('Error:', error));
 });
-
-// btnIniciarSesion.addEventListener('click', (ev) => {
-   
-
-//     const parrafo = document.createElement('p');
-//     parrafo.textContent = 'Hello Word';
-//     parrafo.style.color = 'white';
-//     parrafo.style.textAlign = 'center';
-    
-//     const container = document.querySelector('.container');
-//     container.appendChild(parrafo); 
-//     console.log(container)
-    
-//     window.location.href = '../app/app.html';
-// });
-
-
-
-// erikatorres@gmail.com
-// hola123
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

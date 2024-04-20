@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Yellowtail&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --black:#000000;
+    --red: #ff0000;
+    --white: #fafafb;
+    --blacktraslu: hsla(0, 0%, 0%, 0.208);
+ 
+ }
+
+body{
+    /* width: 100%; */
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom,var(--black),var(--red));
+    height: 100vh;
+    color: var(--white);
+    /* background-image: url(../img/bienvedio-usuario-registrado.jpg); */
+
+}
+
+/* h1 */
+.great-vibes-regular{
+    /* tipografia de googleFonts */
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 80px;
+}
+
+.container {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.bienvenido{
+    height: 100%;
+    margin: 30px;
+    margin-top: 30%;
+    padding: 30px;
+    /* border: 2px solid var(--blacktraslu); */
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--blacktraslu); */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn-iniciar-sesion{
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: rgba(224, 22, 22, 0.852);
+    color: var(--white);
+    padding-left: 10px;
+    margin-top: 50px;
+}
+
+.btn-iniciar-sesion:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
