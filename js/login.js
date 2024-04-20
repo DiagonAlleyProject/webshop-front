@@ -1,6 +1,5 @@
 
 const loginForm = document.getElementById('login-form');
-const btnIniciarSesion = document.getElementById('inciarSesion');
 
 loginForm.addEventListener('submit', (ev) => {
     // Prevenir recarga de la pagina.
@@ -35,7 +34,7 @@ loginForm.addEventListener('submit', (ev) => {
                 // Almacenar el token en localStorage
                 localStorage.setItem('token', token);
 
-                window.location.href = '../app/app.html';
+                window.location.href = 'app.html';
 
             }else {
                 alert('Contraseña incorrecta..');

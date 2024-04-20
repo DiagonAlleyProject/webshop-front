@@ -20,16 +20,19 @@ body{
     background: linear-gradient(to bottom,var(--black),var(--red));
     height: 100vh;
     color: var(--white);
+    /* background-image: url(../img/bienvedio-usuario-registrado.jpg); */
+
 }
 
 /* h1 */
 .great-vibes-regular{
     /* tipografia de googleFonts */
     font-family: "Great Vibes", cursive;
-     font-weight: 400;
+    font-weight: 400;
     font-style: normal;
     text-align: center;
     margin-bottom: 30px;
+    font-size: 80px;
 }
 
 .container {
@@ -37,65 +40,32 @@ body{
     width: 400px;
     height: 600px;
     margin: 0 auto;
-    /* border: 2px solid blue; */
 }
 
-/* parrafo dentro del div foram-grup */
-#form-grup p {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* div donde estan los label e input y botón */
-#form-grup{
+.bienvenido{
     height: 100%;
     margin: 30px;
     margin-top: 30%;
     padding: 30px;
-    border: 2px solid var(--blacktraslu);
+    /* border: 2px solid var(--blacktraslu); */
     justify-content: center;
     align-items: center;
-    background-color: var(--blacktraslu);
+    /* background-color: var(--blacktraslu); */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* estilos de los inputs */
-.inputs input {
-    width: 100%;
-    height: 30px;
-    border: none;
-    background-color: hsla(0, 0%, 0%, 0.458);
-    padding-left: 10px;
-    color: var(--white);
-}
-
-/*Botón de registro*/
-#btn-sig-up{
+.btn-iniciar-sesion{
     width: 100%;
     height: 30px;
     border: none;
     background-color: rgba(224, 22, 22, 0.852);
     color: var(--white);
     padding-left: 10px;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
-#btn-sig-up:hover{
+.btn-iniciar-sesion:hover{
     transform: scale(1.1);
     cursor: pointer;
-}
-
-/* Enlace de login */
-.login{
-    background-color: var(--blacktraslu);
-    border: 2px solid var(--blacktraslu);
-    padding: 30px;
-    margin: 30px;
-    
-    text-align: center;
-}
-
-/* enlaces */
-a{
-    font-weight: bold;
-    color: var(--white);
 }
