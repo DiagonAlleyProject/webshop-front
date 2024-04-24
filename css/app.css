@@ -11,6 +11,9 @@
     --red: #ff0000;
     --white: #fafafb;
     --blacktraslu: hsla(0, 0%, 0%, 0.208);
+    --whitetraslu: #fafafb84;
+    --redtraslu: rgba(255, 0, 0, 0.37);
+
  
  }
 
@@ -18,32 +21,162 @@ body{
     /* width: 100%; */
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom,var(--black),var(--red));
-    height: 100vh;
+    height: 500vh;
     color: var(--white);
+}
+
+/* NavBar*/
+.navbar{
+    height: auto !important;
+    box-shadow: 0 8px 10px var(--redtraslu);
+    /* position: fixed; */
+    z-index: 100;
+    background-color: var(--blacktraslu) !important;
+}
+.navbar-brand{
+    font-family: "Great Vibes", cursive;
+    color: white;
+    font-size: 2.3rem;   
+}
+.nav-link, .active{
+    color: var(--white) !important;
+}
+.nav-item{
+    /* border-bottom: 1px solid var(--white); */
+    padding: 10px 0;
+}
+
+/* Menu Hamburguesa*/
+.navbar-toggler{
+    color: var(--white);
+    border-color: var(--white);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* botón cerrar sesión */
+.cerrar-sesion{
+    /* width: 20%; */
+    height: 30px;
+    border: none;
+    background-color: var(--red);
+    color: var(--white);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    text-align: center;
+    
+} 
+
+.cerrar-sesion{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+main{
+    padding: 25px 10px;
 }
 
 /* h1 */
 .great-vibes-regular{
     /* tipografia de googleFonts */
     font-family: "Great Vibes", cursive;
-     font-weight: 400;
+    font-weight: 400;
     font-style: normal;
     text-align: center;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-/* botón iniciar sesión */
-.cerrar-sesion{
-    width: 50%;
-    height: 30px;
+/* tarjeta de zapatos */
+#tituloTarjetas{
+    margin-top: 50px 0;
+    text-align: center;
+    font-weight: bold;
+}
+#containerCards{
+    width: 100%;
+    /* margin-right: 5px;
+    margin-left: 5px; */
+}
+.card{
+    /* width: 100%; */
     border: none;
-    background-color: rgba(224, 22, 22, 0.852);
-    color: var(--white);
-    padding-left: 10px;
-    margin-top: 30px;
-} 
+    margin-bottom: 30px;
+    background-color: var(--whitetraslu);
+}
+.card h3{
+    font-weight: bold;
+}
+.card img{
+    height: 250px;
+    object-fit: cover;
+}
 
-.cerrar-sesion{
-    transform: scale(1.1);
-    cursor: pointer;
+/* Botones de comprar o agregar al carrito */
+.comprar{
+    width: 100%;
+    background-color: var(--red);
+    border: none;
+
+}
+
+.agregar-carrito{
+    width: 100%;
+    background-color: var(--red);
+    border: none;
+    margin-top: 5px;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet = >  768*/
+@media screen and (min-width:768px){
+    
+    main{
+        padding: 24px 50px;
+    }
+
+    #containerCards{
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card{width: 48%; }
+    }
+
+    /* Escritorio = > 1200*/
+@media screen and (min-width:1200px){
+    .navbar{
+        padding: 0;
+       
+    }
+
+    main{
+        padding: 50px 75px;
+    }
+
+    #tituloTarjetas{
+        margin-top: 50px;
+    }
+
+    #containerCards{
+        display: flex !important; 
+        justify-content:flex-start;
+    }
+
+    .card{
+        width: 23%; 
+        transition: 0.5s;
+        margin-right: 21px;
+
+    }
+
+    .card:hover{
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.372);
+        transform: scale(1.05) translate(-10px);
+    }
 }
