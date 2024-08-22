@@ -1,0 +1,22 @@
+/* Incorporo la hoja de estilos de Bootstrap*/
+@import "bootstrap";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* width: 100%; */
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, var(--black), var(--red));
+  height: 500vh;
+  color: var(--white);
+}
+
+.prueba {
+  color: #7a78781a;
+  background-color: #ffffff1f;
+  border-radius: 20px;
+}
