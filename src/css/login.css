@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Yellowtail&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --black: #000000;
+  --red: #ff0000;
+  --white: #fafafb;
+  --blacktraslu: hsla(0, 0%, 0%, 0.208);
+}
+
+/* contenedor div, contiene todo el formulario centrado*/
+.container {
+  max-width: 80%;
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/* formulario */
+#login-form {
+  /* border: 2px solid blue;  */
+  /*Opcional: altura total de la ventana */
+  height: 95%;
+}
+/* h1 */
+.great-vibes-regular {
+  /* tipografia de googleFonts */
+  color: var(--black);
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* inia sesión */
+h2 {
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+/* div donde estan los label e input y botón */
+#form-grup {
+  height: 70%;
+  margin: 30px;
+  margin-top: 20%;
+  padding: 30px;
+  /* border: 2px solid var(--blacktraslu); */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.inputs input {
+  width: 100%;
+  height: 30px;
+
+  border: none;
+  background-color: rgba(217, 207, 225, 37%);
+  padding-left: 10px;
+  color: var(--white);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* botón iniciar sesión */
+#inciarSesion {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: rgba(0, 0, 0, 83%);
+  color: var(--white);
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+#inciarSesion:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* enlace de olvido su contraseña */
+.olvide-contra {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* enlace de registro */
+.resgistrate {
+  background-color: var(--white);
+
+  /* border: 2px solid var(--blacktraslu); */
+  padding: 30px;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* enlaces */
+a {
+  font-weight: bold;
+  color: #0028fa;
+}
