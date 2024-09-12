@@ -15,7 +15,7 @@ const Home = () => {
     getProduct();
   }, []);
 
-  const url = "http://localhost:8080/product/getAll";
+  const url = import.meta.env.VITE_PRODUCT;
 
   // Función que reraliza la petición para obtener los productos.
   const getProduct = async () => {
