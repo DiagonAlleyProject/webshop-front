@@ -36,7 +36,6 @@ const Home = () => {
     }
   };
 
-  console.log(productos);
   return (
     <>
       <hr />
@@ -47,11 +46,6 @@ const Home = () => {
       ) : (
         <Spinner />
       )}
-
-      {/* {productos &&
-        productos.map((producto) => (
-          <Cards key={producto.idProduct} producto={producto} />
-        ))} */}
     </>
   );
 };

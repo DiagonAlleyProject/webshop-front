@@ -11,8 +11,6 @@ const SingIn = () => {
 
   // Función para registrar usuario.
   const registerUser = async (newUser) => {
-    console.log("llego infor", newUser);
-
     try {
       const URL = import.meta.env.VITE_CLIENT;
       const options = {
@@ -39,7 +37,6 @@ const SingIn = () => {
         showConfirmButton: false,
         timer: 2000,
       });
-      console.log(userCreated);
     } catch (error) {
       console.error(`[registerUser]: ${error}`);
       Swal.fire({
