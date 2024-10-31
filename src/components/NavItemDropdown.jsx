@@ -20,9 +20,6 @@ const NavItemDropdown = ({ nombreItem2 }) => {
           {menuDropdown.map((item, idx) => (
             <Dropdown obj={item} key={idx + item.nombre} />
           ))}
-          {/* <li>
-            <hr className="dropdown-divider" />
-          </li> */}
         </ul>
       </li>
     </>

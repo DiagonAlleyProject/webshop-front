@@ -14,6 +14,32 @@ const RegistrationForm = ({ registerUser }) => {
   };
   // estado del formulario
   const [form, setForm] = useState(initialForm);
+  // estado para manejar errores
+  const [errors, setErrors] = useState({});
+
+  // función para validar el formulario (Validar formulario)
+  const validateForm = () => {
+    const formErrors = {};
+    if (!form.name) {
+      formErrors.name = "El nombre es obligatorio";
+    }
+    if (!form.lastName) {
+      formErrors.lastName = "El apellido es obligatorio";
+    }
+    if (!form.address) {
+      formErrors.address = "La dirección es obligatoria";
+    }
+    if (!form.idCardNumber) {
+      formErrors.idCardNumber = "El DNI es obligatorio";
+    }
+    if (!form.email) {
+      formErrors.email = "El correo es obligatorio";
+    }
+    if (!form.password) {
+      formErrors.password = "La contraseña es obligatoria";
+    }
+    return formErrors;
+  };
 
   // Capturando información de los input
   const handleChange = (e) => {
@@ -31,9 +57,19 @@ const RegistrationForm = ({ registerUser }) => {
     // Prevenir recarga de la pagina.
     e.preventDefault();
 
-    // Se envia el info del formulario a la función de registro.
+    // Validar el formulario antes de enviar la información (Errores de validación)
+    const validationErrors = validateForm();
+    // Object.keys(): Extrae las claves de un objeto y las convierte en un array. (Comprueba si hay errores).
+    if (Object.keys(validationErrors).length > 0) {
+      // Si hay errores, no se envía el formulario y se actualizan los errores
+      setErrors(validationErrors);
+      return;
+    }
+
+    // Si no hay errpres Se envia el info del formulario a la función de registro.
     registerUser(form);
 
+    // Resetear formulario
     handleReset();
   };
 
@@ -44,7 +80,7 @@ const RegistrationForm = ({ registerUser }) => {
 
   return (
     <>
-      <form className="row g-1 " onSubmit={handleSubmit}>
+      <form className="row g-1 text-center" onSubmit={handleSubmit}>
         {/* Nombre */}
         <div className=" ">
           <input
@@ -56,6 +92,11 @@ const RegistrationForm = ({ registerUser }) => {
             onChange={handleChange}
             placeholder="Ingrese su nombre"
           />
+          {errors.name ? (
+            <small className="form-text text-danger ">{errors.name}</small>
+          ) : (
+            ""
+          )}
         </div>
 
         {/* Apellido */}
@@ -69,6 +110,11 @@ const RegistrationForm = ({ registerUser }) => {
             onChange={handleChange}
             placeholder="Ingrese su apellido"
           />
+          {errors.lastName ? (
+            <small className="form-text text-danger ">{errors.lastName}</small>
+          ) : (
+            ""
+          )}
         </div>
 
         {/* Dirección */}
@@ -82,6 +128,11 @@ const RegistrationForm = ({ registerUser }) => {
             onChange={handleChange}
             placeholder="Ingrese su dirección"
           />
+          {errors.address ? (
+            <small className="form-text text-danger ">{errors.address}</small>
+          ) : (
+            ""
+          )}
         </div>
 
         {/* DNI */}
@@ -95,12 +146,19 @@ const RegistrationForm = ({ registerUser }) => {
             onChange={handleChange}
             placeholder="Ingrese su DNI"
           />
+          {errors.idCardNumber ? (
+            <small className="form-text text-danger ">
+              {errors.idCardNumber}
+            </small>
+          ) : (
+            ""
+          )}
         </div>
 
         {/* Correo */}
         <div className=" mt-3">
           <input
-            type="text"
+            type="email"
             className="form-control w-50 mx-auto"
             name="email"
             id="email"
@@ -108,12 +166,17 @@ const RegistrationForm = ({ registerUser }) => {
             onChange={handleChange}
             placeholder="Ingrese su correo"
           />
+          {errors.email ? (
+            <small className="form-text text-danger ">{errors.email}</small>
+          ) : (
+            ""
+          )}
         </div>
 
         {/* contraseña */}
         <div className="mt-3 ">
           <input
-            type="text"
+            type="password"
             className="form-control w-50 mx-auto"
             name="password"
             id="password"
@@ -121,6 +184,11 @@ const RegistrationForm = ({ registerUser }) => {
             onChange={handleChange}
             placeholder="Ingrese su contraseña"
           />
+          {errors.password ? (
+            <small className="form-text text-danger ">{errors.password}</small>
+          ) : (
+            ""
+          )}
         </div>
 
         {/* Botón */}
