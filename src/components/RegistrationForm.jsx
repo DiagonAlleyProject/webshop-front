@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // Formulario de registro
 const RegistrationForm = ({ registerUser }) => {
-  // datos que va tener inicalmente el estado
+  // datos que va tener inicialmente el estado
   const initialForm = {
     id: null,
     name: "",
@@ -38,7 +38,7 @@ const RegistrationForm = ({ registerUser }) => {
   };
 
   // función para resetear formulario
-  const handleReset = (e) => {
+  const handleReset = () => {
     setForm(initialForm);
   };
 
@@ -47,7 +47,6 @@ const RegistrationForm = ({ registerUser }) => {
       <form className="row g-1 " onSubmit={handleSubmit}>
         {/* Nombre */}
         <div className=" ">
-          <label htmlFor="lbl-name" className="form-label"></label>
           <input
             type="text"
             className="form-control w-50 mx-auto"
@@ -60,8 +59,7 @@ const RegistrationForm = ({ registerUser }) => {
         </div>
 
         {/* Apellido */}
-        <div className=" ">
-          <label htmlFor="lbl-lastName" className="form-label"></label>
+        <div className="mt-3 ">
           <input
             type="text"
             className="form-control w-50 mx-auto"
@@ -74,8 +72,7 @@ const RegistrationForm = ({ registerUser }) => {
         </div>
 
         {/* Dirección */}
-        <div className=" ">
-          <label htmlFor="lbl-address" className="form-label"></label>
+        <div className=" mt-3">
           <input
             type="text"
             className="form-control w-50 mx-auto"
@@ -88,8 +85,7 @@ const RegistrationForm = ({ registerUser }) => {
         </div>
 
         {/* DNI */}
-        <div className=" ">
-          <label htmlFor="lbl-idCardNumber" className="form-label"></label>
+        <div className="mt-3 ">
           <input
             type="number"
             className="form-control w-50 mx-auto"
@@ -102,8 +98,7 @@ const RegistrationForm = ({ registerUser }) => {
         </div>
 
         {/* Correo */}
-        <div className=" ">
-          <label htmlFor="lbl-email" className="form-label"></label>
+        <div className=" mt-3">
           <input
             type="text"
             className="form-control w-50 mx-auto"
@@ -116,8 +111,7 @@ const RegistrationForm = ({ registerUser }) => {
         </div>
 
         {/* contraseña */}
-        <div className=" ">
-          <label htmlFor="lbl-password" className="form-label"></label>
+        <div className="mt-3 ">
           <input
             type="text"
             className="form-control w-50 mx-auto"
@@ -131,7 +125,7 @@ const RegistrationForm = ({ registerUser }) => {
 
         {/* Botón */}
         <div className=" text-center">
-          <button type="submit" className="btn btn-dark mt-4 mb-4 w-50">
+          <button type="submit" className="btn btn-dark mt-3 mb-4 w-50">
             Registrarse
           </button>
         </div>

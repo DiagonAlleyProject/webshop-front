@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import NavItem from "./NavItem";
 import NavItemDropdown from "./NavItemDropdown";
 import { menuItems } from "../constants/menuItems";
@@ -57,9 +57,9 @@ const NavBar = () => {
 
             {/* Boton iniciar sesión */}
             <div className="d-grid gap-1 d-md-flex justify-content-md-end">
-              <Link to="/" className="btn btn-dark">
-                Iniciar sesión
-              </Link>
+              <NavLink to="/iniciarsesion">
+                <button className="btn btn-dark">Iniciar sesión</button>
+              </NavLink>
             </div>
           </div>
         </div>
