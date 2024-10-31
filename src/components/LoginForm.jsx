@@ -16,7 +16,7 @@ const LoginForm = ({ startAccess }) => {
       ...formStatus,
       [e.target.name]: e.target.value,
     };
-    // console.log(credentials);
+    // Actualizar el estado del formulario
     setFormStatus(credentials);
   };
   // función para validar el formulario (Validar formulario)
